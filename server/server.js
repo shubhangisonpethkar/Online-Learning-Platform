@@ -1,14 +1,15 @@
 const express = require("express");
-const courseRoutes = require("./routes/courseRoutes");
 
 const app = express();
 
 app.use(express.json());
 
-// Course Routes
-app.use("/api/courses", courseRoutes);
+const courseRoutes = require("./routes/courseRoutes");
+const enrollmentRoutes = require("./routes/enrollmentRoutes");
 
-// Default Route
+app.use("/api/courses", courseRoutes);
+app.use("/api/enrollments", enrollmentRoutes);
+
 app.get("/", (req, res) => {
   res.send("Online Learning Platform Backend Running...");
 });

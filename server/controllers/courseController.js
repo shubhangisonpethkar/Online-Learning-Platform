@@ -1,42 +1,19 @@
-// Get all courses
-const getCourses = (req, res) => {
-  res.json({
-    message: "Get all courses",
-  });
+exports.getCourses = (req, res) => {
+  res.json({ message: "Get All Courses" });
 };
 
-// Get course by ID
-const getCourseById = (req, res) => {
-  res.json({
-    message: `Get course with ID: ${req.params.id}`,
-  });
+exports.getCourseById = (req, res) => {
+  res.json({ message: `Get Course ${req.params.id}` });
 };
 
-// Create course
-const createCourse = (req, res) => {
-  res.json({
-    message: "Create new course",
-  });
+exports.createCourse = (req, res) => {
+  res.json({ message: "Course Created" });
 };
 
-// Update course
-const updateCourse = (req, res) => {
-  res.json({
-    message: `Update course with ID: ${req.params.id}`,
-  });
+exports.updateCourse = (req, res) => {
+  res.json({ message: `Course ${req.params.id} Updated` });
 };
 
-// Delete course
-const deleteCourse = (req, res) => {
-  res.json({
-    message: `Delete course with ID: ${req.params.id}`,
-  });
-};
-
-module.exports = {
-  getCourses,
-  getCourseById,
-  createCourse,
-  updateCourse,
-  deleteCourse,
+exports.deleteCourse = (req, res) => {
+  res.json({ message: `Course ${req.params.id} Deleted` });
 };
