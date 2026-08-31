@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+.courses-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.courses-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.courses-header h1 {
+  font-size: 32px;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.courses-header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Search and Filters */
+.course-controls {
+  max-width: 1000px;
+  margin: 0 auto 35px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course-controls input,
+.course-controls select {
+  padding: 12px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+.course-controls input {
+  width: 230px;
+}
+
+.course-controls select {
+  min-width: 150px;
+}
+
+/* Course Cards */
+.course-list {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Messages */
+.loading-message,
+.error-message,
+.no-courses-message {
+  text-align: center;
+  font-size: 16px;
+  margin: 30px 0;
+}
+
+.error-message {
+  color: #dc2626;
+}
+
+.loading-message {
+  color: #2563eb;
+}
+
+.no-courses-message {
+  color: #6b7280;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.pagination button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.pagination button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .course-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .courses-page {
+    padding: 30px 15px;
+  }
+
+  .courses-header h1 {
+    font-size: 26px;
+  }
+
+  .course-controls {
+    flex-direction: column;
+  }
+
+  .course-controls input,
+  .course-controls select {
+    width: 100%;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+}

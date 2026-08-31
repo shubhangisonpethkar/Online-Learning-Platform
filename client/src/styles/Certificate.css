@@ -1,0 +1,159 @@
+.certificate-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f4f7fb;
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.certificate {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.certificate-border {
+  border: 8px solid #2f5fb3;
+  padding: 50px;
+  text-align: center;
+  min-height: 550px;
+}
+
+.certificate-top {
+  font-size: 55px;
+}
+
+.certificate h1 {
+  color: #2f5fb3;
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.presented-text,
+.completion-text,
+.certificate-description {
+  color: #555;
+  font-size: 17px;
+}
+
+.student-name {
+  font-size: 38px;
+  color: #1f3f75;
+  margin: 20px 0;
+}
+
+.course-name {
+  font-size: 28px;
+  color: #2f5fb3;
+  margin: 15px 0;
+}
+
+.certificate-description {
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+.certificate-details {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin: 40px 0;
+}
+
+.certificate-details div {
+  text-align: center;
+}
+
+.certificate-details p {
+  margin-top: 8px;
+  color: #555;
+}
+
+.certificate-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 50px;
+}
+
+.signature-line {
+  width: 180px;
+  border-top: 1px solid #333;
+  margin: 0 auto 8px;
+}
+
+.certificate-id {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #555;
+}
+
+.certificate-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.back-course-btn,
+.print-btn {
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  background: #2f5fb3;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.print-btn {
+  font-family: inherit;
+}
+
+.back-course-btn:hover,
+.print-btn:hover {
+  background: #234a8c;
+}
+
+@media (max-width: 700px) {
+  .certificate-border {
+    padding: 25px;
+  }
+
+  .certificate h1 {
+    font-size: 28px;
+  }
+
+  .student-name {
+    font-size: 30px;
+  }
+
+  .certificate-details,
+  .certificate-footer {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+}
+
+@media print {
+  .certificate-actions {
+    display: none;
+  }
+
+  .certificate-page {
+    padding: 0;
+    background: white;
+  }
+
+  .certificate {
+    box-shadow: none;
+  }
+}
